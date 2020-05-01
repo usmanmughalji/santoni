@@ -9,7 +9,7 @@ BOTAPI=
 USERID=
 CCACHE=$(command -v ccache)
 
-make ARCH=arm64 O=out santonidefconfig
+make ARCH=arm64 O=out santoni_defconfig
 PATH="$(pwd)/arm64-gcc/bin:$(pwd)/arm32-gcc/bin:${PATH}" \
 make -j"$(nproc --all)" O=out \
                       ARCH=arm64 \
