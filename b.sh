@@ -6,7 +6,7 @@ git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/
 rm -rf out
 make mrproper
 PATH="aarch64-linux-android-4.9/bin:arm-linux-androideabi-4.9/bin:$PATH"
-make O=out ARCH=arm64 land_defconfig
+make O=out ARCH=arm64 santoni_defconfig
 make -j$(nproc --all) O=out \
   ARCH=arm64 \
   CROSS_COMPILE=aarch64-linux-android- \
