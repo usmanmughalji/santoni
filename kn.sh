@@ -1,6 +1,6 @@
 #!/bin/bash
-git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9
-git clone https://android.googlesource.com/platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9
+git clone https://github.com/arter97/arm64-gcc --depth=1
+git clone https://github.com/arter97/arm32-gcc --depth=1
 git clone https://github.com/ProtoChuz/AnyKernel3
 
 export USE_CCACHE=1
@@ -10,7 +10,7 @@ USERID=
 CCACHE=$(command -v ccache)
 
 make ARCH=arm64 O=out santoni_defconfig
-PATH="$(pwd)/aarch64-linux-android-4.9/bin:$(pwd)/arm-linux-androideabi-4.9/bin:${PATH}" \
+PATH="$(pwd)/arm64-gcc/bin:$(pwd)/arm32-gcc/bin:${PATH}" \
 make -j"$(nproc --all)" O=out \
                       ARCH=arm64 \
                       CROSS_COMPILE=aarch64-elf- \
