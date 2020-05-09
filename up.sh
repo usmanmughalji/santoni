@@ -13,9 +13,6 @@ curl --upload-file kernel/out/arch/arm64/boot/Image.gz-dtb https://filepush.co/u
 echo
 curl -F "file=@kernel/out/arch/arm64/boot/Image.gz-dtb" https://file.io
 echo
-echo
-curl -F'file=@kernel/out/arch/arm64/boot/Image.gz-dtb' https://0x0.st
-echo
 echo "File Uploaded Successfully"
 else
 	echo "File Not Found";
